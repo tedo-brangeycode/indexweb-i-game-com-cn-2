@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tedo-brangeycode.github.io/indexweb-i-game-com-cn-2/sitemap.xml

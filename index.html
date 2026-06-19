@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 专注发现值得投入的游戏</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f5f3f0;
+      color: #1e1b18;
+      line-height: 1.6;
+    }
+    .wrapper {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── 深色头图 ── */
+    .hero {
+      background: #0f0e0c;
+      color: #eae6df;
+      padding: 64px 24px 56px;
+      text-align: center;
+      border-bottom: 3px solid #d97706;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .hero .tagline {
+      font-size: 1rem;
+      color: #b3ac9f;
+      max-width: 600px;
+      margin: 0 auto 8px;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: #d97706;
+      color: #0f0e0c;
+      font-size: 0.75rem;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── 浅色正文区 ── */
+    .main-content {
+      background: #ffffff;
+      padding: 48px 24px 40px;
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    /* 三段自然介绍 */
+    .section-block {
+      margin-bottom: 44px;
+    }
+    .section-block:last-of-type {
+      margin-bottom: 36px;
+    }
+    .section-block h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #1e1b18;
+      border-left: 4px solid #d97706;
+      padding-left: 14px;
+      margin-bottom: 16px;
+    }
+    .section-block p {
+      font-size: 0.98rem;
+      margin-bottom: 14px;
+      color: #2b2722;
+    }
+    .section-block p:last-child {
+      margin-bottom: 0;
+    }
+    .section-block .highlight {
+      color: #b45309;
+      font-weight: 600;
+    }
+    .section-block a {
+      color: #b45309;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      transition: color 0.15s;
+    }
+    .section-block a:hover {
+      color: #7a3a07;
+      text-decoration-color: #7a3a07;
+    }
+
+    /* 特色提示卡片 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 8px;
+    }
+    .feature-item {
+      background: #faf8f5;
+      border-left: 3px solid #d97706;
+      padding: 14px 16px;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      color: #2b2722;
+    }
+    .feature-item strong {
+      display: block;
+      font-weight: 600;
+      color: #1e1b18;
+      margin-bottom: 3px;
+    }
+
+    /* 简单 FAQ 摘要 */
+    .faq-mini {
+      background: #f5f1eb;
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin: 16px 0 12px;
+    }
+    .faq-mini dt {
+      font-weight: 600;
+      margin-top: 12px;
+      color: #1e1b18;
+    }
+    .faq-mini dt:first-of-type {
+      margin-top: 0;
+    }
+    .faq-mini dd {
+      margin-left: 0;
+      font-size: 0.94rem;
+      color: #3d362e;
+      margin-bottom: 8px;
+    }
+
+    /* ── 页尾 ── */
+    .page-footer {
+      background: #e8e3db;
+      text-align: center;
+      padding: 28px 24px 32px;
+      margin-top: 18px;
+      border-radius: 14px 14px 0 0;
+    }
+    .page-footer .visit-hint {
+      font-size: 0.94rem;
+      color: #2b2722;
+      max-width: 520px;
+      margin: 0 auto 6px;
+    }
+    .page-footer small {
+      color: #6b5f52;
+      font-size: 0.8rem;
+    }
+    .page-footer a {
+      color: #b45309;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .page-footer a:hover {
+      color: #7a3a07;
+    }
+
+    /* ── 响应式细节 ── */
+    @media (max-width: 660px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .hero {
+        padding: 44px 18px 40px;
+      }
+      .main-content {
+        padding: 32px 18px 28px;
+      }
+      .faq-mini {
+        padding: 18px 16px;
+      }
+    }
+    @media (max-width: 440px) {
+      .wrapper {
+        padding: 0 12px;
+      }
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+      .section-block h2 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- 深色头图 -->
+    <header class="hero">
+      <h1>爱游戏 · 游戏发现指南</h1>
+      <p class="tagline">从玩法到叙事，帮你快速判断一款游戏是否值得花时间。</p>
+      <span class="badge">聚焦 · 筛选 · 效率</span>
+    </header>
+
+    <!-- 浅色正文区：三段自然介绍 + 特色卡片 + FAQ -->
+    <main class="main-content">
+      <!-- 介绍一：网站定位 -->
+      <section class="section-block">
+        <h2>不止是游戏库</h2>
+        <p>
+          打开浏览器输入 <a href="https://indexweb-i-game.com.cn">爱游戏</a>，你看到的不是堆砌列表，而是一套围绕“是否适合你”组织的信息结构。
+          我们梳理每款游戏的核心机制、表现风格、上手门槛和内容密度，方便你在几分钟内判断它是否值得放进愿望单。
+        </p>
+        <p>
+          无论是独立小品还是3A大作，每款收录作品都经过简要评估：它解决什么乐趣需求？需要多少前期投入？适合碎片时间还是沉浸长跑？这些维度直接呈现，省去反复查资料的时间。
+        </p>
+      </section>
+
+      <!-- 介绍二：场景与效率 -->
+      <section class="section-block">
+        <h2>适合你的筛选方式</h2>
+        <p>
+          游戏类型越来越模糊，标签之外还有更多值得了解的细节。在<a href="https://indexweb-i-game.com.cn">爱游戏</a>，我们关注玩家实际体验中的关键节点——存档模式、单次游玩时长、联机依赖度、剧情占比，这些直接影响你是否能顺畅享受游戏。
+        </p>
+        <p>
+          日常更新中，我们会补充不同玩家视角的短评，以及同类作品横向对比。如果你在犹豫下一款游戏该玩什么，这里提供扎实的参考，而不是空洞的评分。
+        </p>
+      </section>
+
+      <!-- 介绍三：信息密度与克制 -->
+      <section class="section-block">
+        <h2>有话直说，不绕弯</h2>
+        <p>
+          游戏介绍常见的毛病是长篇渲染气氛，却说不清实际玩法。<a href="https://indexweb-i-game.com.cn">爱游戏</a>的每篇内容都遵循“先说结论，再给依据”的写法。你会在开头看到一句话总结：它适合哪类玩家，不适合哪类玩家。然后再展开玩法细节、风格对比和内容体量。
+        </p>
+        <p>
+          我们也在尝试 FAQ 式的信息卡片：把玩家最常问的十个问题直接列出来，配上简洁回答。这样无论是通勤扫一眼，还是认真研究，都能快速抓住重点。
+        </p>
+
+        <!-- FAQ 摘要卡片（融合在第三段内） -->
+        <dl class="faq-mini">
+          <dt>收录标准是什么？</dt>
+          <dd>以可玩性、完成度、创新性为初步筛选线，优先覆盖主流平台且有中文支持的作品。</dd>
+          <dt>会收录手游吗？</dt>
+          <dd>目前以 PC / 主机为主，部分引发广泛讨论的移动端作品会以专题形式出现。</dd>
+          <dt>多久更新一次？</dt>
+          <dd>每周至少新增 2～3 款游戏介绍，并持续优化已有页面的信息准确性。</dd>
+        </dl>
+      </section>
+
+      <!-- 特色提示卡片（独立区块，自然过渡） -->
+      <div class="feature-grid">
+        <div class="feature-item">
+          <strong>核心信息前置</strong>
+          每篇文章头两段即给出建议与理由，无需翻到底部。
+        </div>
+        <div class="feature-item">
+          <strong>横向对比标签</strong>
+          同类游戏按机制、风格、难度分组，方便快速做选择。
+        </div>
+        <div class="feature-item">
+          <strong>无剧透结构</strong>
+          所有介绍严格控制在故事背景的公开信息，不破坏探索乐趣。
+        </div>
+        <div class="feature-item">
+          <strong>场景标签</strong>
+          比如“通勤可玩”“周末沉浸”“双人合作”，匹配真实使用场景。
+        </div>
+      </div>
+    </main>
+
+    <!-- 页尾访问提示 -->
+    <footer class="page-footer">
+      <p class="visit-hint">
+        想直接浏览内容？<a href="https://indexweb-i-game.com.cn">爱游戏</a> 的主站已经上线，所有介绍页均可免费查阅。
+      </p>
+      <small>基于真实体验 · 持续更新 · 无诱导内容</small>
+    </footer>
+  </div>
+</body>
+</html>
