@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>333体育 – 持续陪伴的赛事信息平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8f6f2;
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+            color: #2e2b28;
+            line-height: 1.8;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 800px;
+            width: 100%;
+            background-color: #fcfaf7;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+            margin-bottom: 2.5rem;
+        }
+
+        .opening-line {
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            color: #4a3f38;
+            border-left: 4px solid #b7a99a;
+            padding-left: 1.2rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .intro-text {
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        .intro-text strong {
+            font-weight: 600;
+            color: #3f352e;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem 2rem;
+            margin: 2.2rem 0 2rem 0;
+            padding: 0 0.2rem;
+        }
+
+        .feature-item {
+            background-color: #f3efe9;
+            padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+            border-radius: 14px;
+            border-left: 6px solid #b7a99a;
+            transition: background 0.2s ease;
+        }
+
+        .feature-item:hover {
+            background-color: #ece6dd;
+        }
+
+        .feature-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: #3f352e;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #4f453d;
+        }
+
+        .story-block {
+            background-color: #f3efe9;
+            padding: 1.8rem 2rem;
+            border-radius: 18px;
+            margin: 1.8rem 0 2rem 0;
+            border-left: 6px solid #b7a99a;
+        }
+
+        .story-block p {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .story-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-mini {
+            margin: 2rem 0 1.5rem 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .faq-mini li {
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed #ddd6cd;
+            display: flex;
+            gap: 0.6rem;
+            align-items: baseline;
+        }
+
+        .faq-mini li:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: #3f352e;
+            white-space: nowrap;
+            min-width: 5em;
+        }
+
+        .faq-a {
+            color: #4f453d;
+        }
+
+        .closing-note {
+            margin-top: 2.2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2dad1;
+            font-size: 1rem;
+            text-align: left;
+            color: #4f453d;
+        }
+
+        .closing-note a {
+            color: #3f352e;
+            text-decoration: none;
+            border-bottom: 1px solid #b7a99a;
+            padding-bottom: 1px;
+            transition: border-color 0.2s;
+        }
+
+        .closing-note a:hover {
+            border-bottom-color: #3f352e;
+        }
+
+        .bookmark-tip {
+            display: inline-block;
+            background-color: #eae2d9;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #3f352e;
+            margin-top: 0.6rem;
+            letter-spacing: 0.01em;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+
+            .page {
+                padding: 1.8rem 1.2rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .opening-line {
+                font-size: 1.2rem;
+                padding-left: 1rem;
+            }
+
+            .story-block {
+                padding: 1.4rem 1.2rem;
+            }
+
+            .faq-mini li {
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+
+            .faq-q {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="opening-line">
+            “有些信息，值得你不断回访。”
+        </div>
+
+        <div class="intro-text">
+            <p>对于关注竞技体育的用户而言，信息的连贯与可靠往往比一时的速度更重要。再次打开一个页面，发现布局依然熟悉、数据依旧清晰，这种体验本身便是信任的延续。<strong>333体育</strong>并非一个追赶热点的快消站，它更偏向于提供结构稳定、内容扎实的赛事信息基础层。无论是联赛走向、队伍变动还是赛程归档，你都能在这里找到一致的呈现方式。</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>栏目归档</h3>
+                <p>赛季结束后，历史数据与文章不会被掩埋，而是以清晰的分类保留，方便你随时回溯。</p>
+            </div>
+            <div class="feature-item">
+                <h3>更新节奏</h3>
+                <p>不追求每分钟刷新，而是以日/周为粒度提供有上下文的信息，减少无效干扰。</p>
+            </div>
+            <div class="feature-item">
+                <h3>浏览连贯性</h3>
+                <p>页面结构保持克制，导航与内容区边界明确，降低再次访问时的认知成本。</p>
+            </div>
+            <div class="feature-item">
+                <h3>收藏友好</h3>
+                <p>每个信息模块都具备稳定的锚点，你可以直接收藏特定栏目，不必每次都从头翻阅。</p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <p>一位长期关注足球联赛的访客曾提到，他每隔两三天就会打开 <a href="https://hub-333sports.com" style="color:#3f352e; text-decoration: none; border-bottom: 1px solid #b7a99a;">333体育</a> 的赛程页面，并不是为了获取突发新闻，而是想确认下一轮比赛的准确时间与场地变动。他说：“页面没有花哨的弹窗，也没有频繁变动的按钮，每次来都像走进一家熟悉的报刊亭——你知道东西放在哪个位置。” 这种习惯一旦形成，回访便不再需要刻意记住入口，而是自然发生。</p>
+            <p>对于很多体育爱好者而言，信息平台的价值不在于一次性的惊艳，而在于长期使用中逐渐积累的可靠感。收藏夹里如果有一个能稳定提供赛事框架的站点，日常查阅的效率会明显提升。</p>
+        </div>
+
+        <ul class="faq-mini">
+            <li>
+                <span class="faq-q">Q：内容侧重哪些项目？</span>
+                <span class="faq-a">足球、篮球、网球及部分综合性赛事，以主流联赛与杯赛为主，兼顾二级联赛动态。</span>
+            </li>
+            <li>
+                <span class="faq-q">Q：是否有移动端适配？</span>
+                <span class="faq-a">页面采用响应式设计，手机与平板均可获得接近桌面端的阅读体验。</span>
+            </li>
+            <li>
+                <span class="faq-q">Q：如何快速回到之前看过的文章？</span>
+                <span class="faq-a">建议将特定栏目页加入浏览器书签，或使用站内搜索功能（位于页面顶部）。</span>
+            </li>
+        </ul>
+
+        <div class="closing-note">
+            <p>把某个网站保留在收藏夹里，往往不是因为它的内容最密集，而是因为它在你需要的时候总在那里，并且呈现方式始终如一。如果你在寻找一个能长期伴随观赛习惯的信息源，不妨将 <a href="https://hub-333sports.com">333体育</a> 加入书签栏。下一次打开，你看到的结构和今天一样清晰，而内容已经向前滚动了一轮。</p>
+            <div class="bookmark-tip">⌘ + D / Ctrl + D  ·  保留一处稳定的信息坐标</div>
+        </div>
+    </div>
+</body>
+</html>
