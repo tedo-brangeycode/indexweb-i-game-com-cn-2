@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>乐竞体育 · 专题介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f6fafc;
+            color: #1a2f3a;
+            line-height: 1.6;
+            padding: 0 1.2rem 3rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        /* 首页横幅 —— 杂志区 */
+        .magazine-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 3.6rem 1.2rem 2.8rem;
+            background: linear-gradient(135deg, #e0f0f5 0%, #c8e6e9 70%);
+            border-radius: 2.4rem 2.4rem 1.2rem 1.2rem;
+            margin: 2.2rem 0 2.8rem;
+            box-shadow: 0 6px 18px rgba(0, 90, 100, 0.06);
+            border: 1px solid rgba(70, 140, 150, 0.12);
+            transition: box-shadow 0.2s;
+        }
+
+        .magazine-hero:hover {
+            box-shadow: 0 12px 28px rgba(0, 100, 120, 0.10);
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: #1d7a7f;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 2px 6px rgba(23, 110, 110, 0.2);
+        }
+
+        .magazine-hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0a3b44;
+            margin-bottom: 0.5rem;
+        }
+
+        .magazine-hero .subhead {
+            font-size: 1.1rem;
+            color: #2d5b66;
+            max-width: 580px;
+            margin: 0.6rem auto 1.2rem;
+            font-weight: 400;
+            border-bottom: 1px dashed #7bafb5;
+            padding-bottom: 0.8rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.6rem 1.5rem;
+            color: #2d606a;
+            font-size: 0.9rem;
+        }
+
+        .hero-meta span {
+            background: white;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            box-shadow: 0 1px 4px rgba(0, 70, 80, 0.06);
+        }
+
+        /* 卡片网格 — 背景说明 + 三段介绍 */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.6rem;
+            margin-bottom: 2.8rem;
+        }
+
+        @media (min-width: 680px) {
+            .grid-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+            .grid-cards .card-full {
+                grid-column: 1 / -1;
+            }
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.6rem;
+            padding: 1.8rem 1.5rem;
+            box-shadow: 0 3px 12px rgba(50, 100, 110, 0.06);
+            transition: transform 0.15s, box-shadow 0.2s;
+            border: 1px solid #dceef0;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(20, 100, 110, 0.08);
+            border-color: #9acbd2;
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            line-height: 1;
+            margin-bottom: 0.3rem;
+            display: inline-block;
+            background: #deeef1;
+            padding: 0.2rem 0.6rem;
+            border-radius: 40px;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #07444f;
+            margin: 0.2rem 0 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .card p {
+            color: #2e4b54;
+            font-size: 0.96rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .card .tag {
+            display: inline-block;
+            background: #c7e4e8;
+            color: #12555f;
+            padding: 0.05rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        /* 背景说明 —— 特写卡片 */
+        .background-note {
+            background: #e6f2f5;
+            border-left: 4px solid #1b878e;
+            padding: 1.6rem 1.8rem;
+            border-radius: 1.2rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .background-note h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #04343d;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .background-note p {
+            color: #1d424b;
+            max-width: 800px;
+        }
+
+        /* 引用 / 摘要区 */
+        .faq-summary {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            background: #dceff2;
+            padding: 1.6rem 1.8rem;
+            border-radius: 2rem;
+            margin: 1.8rem 0 2.2rem;
+        }
+
+        .faq-item {
+            flex: 1 1 200px;
+        }
+
+        .faq-item strong {
+            display: block;
+            color: #02434e;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+            letter-spacing: 0.01em;
+        }
+
+        .faq-item p {
+            font-size: 0.92rem;
+            color: #194d58;
+        }
+
+        /* 页尾访问提示 */
+        .footer-visit {
+            background: white;
+            border-radius: 2rem;
+            padding: 1.8rem 1.5rem;
+            text-align: center;
+            border: 1px solid #bfdbdf;
+            box-shadow: 0 4px 10px rgba(0, 60, 70, 0.03);
+            margin-top: 1.2rem;
+        }
+
+        .footer-visit p {
+            font-size: 1rem;
+            color: #1a424b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-visit .site-link {
+            color: #066a76;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid #8fcbd2;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .footer-visit .site-link:hover {
+            border-bottom-color: #045f6b;
+            color: #023d47;
+        }
+
+        .footer-small {
+            margin-top: 2.2rem;
+            font-size: 0.75rem;
+            color: #547c85;
+            border-top: 1px solid #d2e6ea;
+            padding-top: 1.2rem;
+            text-align: center;
+        }
+
+        /* 响应式精细调整 */
+        @media (max-width: 480px) {
+            .magazine-hero h1 {
+                font-size: 2rem;
+            }
+            .magazine-hero {
+                padding: 2.4rem 0.8rem 2rem;
+            }
+            .card {
+                padding: 1.3rem;
+            }
+            .faq-summary {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .grid-cards {
+                gap: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- 杂志横幅 hero -->
+        <header class="magazine-hero">
+            <span class="hero-label">专题 · 站点索引</span>
+            <h1>乐竞体育 · 信息纵深</h1>
+            <div class="subhead">专业体育内容平台 · 背景与定位概述</div>
+            <div class="hero-meta">
+                <span>📋 站点介绍</span>
+                <span>🏅 可信说明</span>
+                <span>📌 持续更新</span>
+            </div>
+        </header>
+
+        <!-- 背景说明 卡片块 -->
+        <section class="background-note">
+            <h2>📰 站点背景</h2>
+            <p><strong>乐竞体育</strong> 是一个聚焦体育资讯与赛事动态的中文内容平台。其内容体系涵盖赛事解读、运动科普以及行业观察，信息来源通过多渠道整合，保持相对中性的表述风格。平台致力于为中文用户提供结构化的体育信息，不渲染极端情绪，亦不虚构数据。以下从三个维度展开介绍，帮助浏览者快速建立认知。</p>
+        </section>
+
+        <!-- 网格卡片 三段自然介绍 (特点/内容/场景) -->
+        <div class="grid-cards">
+            <!-- 卡片1：内容特点 -->
+            <article class="card">
+                <div class="card-icon">⚙️</div>
+                <h3>信息组织方式</h3>
+                <p>站点采用分类聚合模式，将体育项目、赛事节点与背景资料整合为可浏览模块。每篇内容均标注基础事实，避免夸张修辞。同时设有专题索引，便于回溯。</p>
+                <span class="tag">结构化</span>
+                <span class="tag">事实优先</span>
+            </article>
+            <!-- 卡片2：内容可信说明 -->
+            <article class="card">
+                <div class="card-icon">📌</div>
+                <h3>可信说明</h3>
+                <p>平台编辑流程注重交叉核实，引用公开赛事数据及官方统计。不发布未经确认的转会或成绩预测，并显著区分观点与事实。页面通过常规更新维护准确度。</p>
+                <span class="tag">引用可查</span>
+                <span class="tag">观点独立</span>
+            </article>
+            <!-- 卡片3：适用场景/读者 (第三段) 占两列？在小屏是单列，大屏自动两列，但第三个卡片单独占一行 用 card-full 仅在大屏跨列 -->
+            <article class="card card-full">
+                <div class="card-icon">👥</div>
+                <h3>内容场景与受众</h3>
+                <p>从日常训练的业余爱好者到关注联赛动态的深度读者，均可在站点找到匹配信息。页面排版适配移动端，文末常附相关赛事背景，减少跳转成本。内容密度中等，兼顾信息量与可读性。</p>
+                <span class="tag">移动友好</span>
+                <span class="tag">多项目覆盖</span>
+                <span class="tag">逐步扩充</span>
+            </article>
+        </div>
+
+        <!-- FAQ 摘要型片段 (非完整问答，类似摘要) -->
+        <div class="faq-summary">
+            <div class="faq-item">
+                <strong>📌 内容更新频率？</strong>
+                <p>依据赛季节奏，每周保持 2-4 次内容刷新，重大赛事期间加更。</p>
+            </div>
+            <div class="faq-item">
+                <strong>🔍 是否包含用户评论？</strong>
+                <p>当前版本以编辑内容为主，暂未开放 UGC 模块，确保信息洁净度。</p>
+            </div>
+            <div class="faq-item">
+                <strong>🌐 访问方式</strong>
+                <p>全站适配手机与平板，无额外应用依赖。通过浏览器即可获取内容。</p>
+            </div>
+        </div>
+
+        <!-- 页尾访问提示 + 正确链接 -->
+        <footer class="footer-visit">
+            <p>若希望进一步浏览资讯与赛事专题，可以直接访问 <a href="https://chinese-lejingsports.com" class="site-link">乐竞体育</a>，查看持续更新的内容库。页面以专题方式梳理不同项目，适合日常参考。</p>
+            <div class="footer-small">
+                <span>杂志专题 · 信息概览 · 2025</span>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
