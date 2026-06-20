@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>米兰体育 · 信息索引手记</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #fae3c8 0%, #f6d5b3 45%, #f0c49e 100%);
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Times New Roman", serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.2rem;
+      line-height: 1.65;
+    }
+
+    .card {
+      max-width: 780px;
+      width: 100%;
+      background: rgba(255, 249, 240, 0.92);
+      backdrop-filter: blur(2px);
+      border-radius: 44px 18px 44px 18px;
+      box-shadow: 0 18px 36px -8px rgba(140, 80, 30, 0.25), 0 6px 12px rgba(0,0,0,0.03);
+      padding: 2.8rem 2.6rem;
+      transition: all 0.25s ease;
+    }
+
+    @media (max-width: 520px) {
+      .card {
+        padding: 2rem 1.4rem;
+        border-radius: 32px 12px 32px 12px;
+      }
+    }
+
+    .hero-short {
+      font-size: 1.9rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #a55f3a;
+      margin-bottom: 0.2rem;
+      line-height: 1.2;
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-short::after {
+      content: "✦";
+      font-size: 1.2rem;
+      color: #bc7a4c;
+      margin-left: 12px;
+      opacity: 0.6;
+      vertical-align: super;
+    }
+
+    .opening {
+      margin: 1.8rem 0 1.4rem 0;
+      color: #59412e;
+      font-size: 1.06rem;
+      border-left: 3px solid #dba67a;
+      padding-left: 1.5rem;
+      font-style: normal;
+    }
+
+    .gather-note {
+      margin: 1.6rem 0;
+      color: #4d3b2b;
+    }
+
+    .gather-note p {
+      margin-bottom: 1.2rem;
+    }
+
+    .feature-list {
+      background: #fef6ed;
+      border-radius: 28px 8px 28px 8px;
+      padding: 1.8rem 2rem;
+      margin: 1.8rem 0 1.4rem 0;
+      list-style: none;
+      box-shadow: inset 0 1px 4px rgba(160, 100, 50, 0.08);
+    }
+
+    .feature-list li {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+      margin-bottom: 1.1rem;
+      color: #4f3b29;
+      font-size: 1rem;
+    }
+
+    .feature-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-marker {
+      display: inline-block;
+      min-width: 24px;
+      height: 24px;
+      background: #dba67a;
+      color: #2e1f14;
+      border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
+      text-align: center;
+      line-height: 24px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+
+    .soft-end {
+      margin-top: 2rem;
+      padding-top: 1.4rem;
+      border-top: 1px dashed #dbb694;
+      color: #604b36;
+      font-size: 0.98rem;
+    }
+
+    .soft-end a {
+      color: #9f633b;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #d3a175;
+      transition: border 0.2s, color 0.2s;
+    }
+
+    .soft-end a:hover {
+      color: #633f26;
+      border-bottom: 1px solid #8f5936;
+    }
+
+    .inline-link {
+      color: #9f633b;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #d3a175;
+      transition: border 0.2s, color 0.2s;
+    }
+
+    .inline-link:hover {
+      color: #633f26;
+      border-bottom: 1px solid #8f5936;
+    }
+
+    .small-note {
+      font-size: 0.88rem;
+      opacity: 0.75;
+      margin-top: 1.6rem;
+      text-align: right;
+      color: #7b604b;
+    }
+
+    .small-note span {
+      background: #eddccb;
+      padding: 0.1rem 0.6rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e6cfbb;
+      margin: 1.6rem 0;
+    }
+
+    .faq-mini {
+      background: #faf1e7;
+      border-radius: 20px 6px 20px 6px;
+      padding: 1.2rem 1.6rem;
+      margin: 1.2rem 0 0.2rem 0;
+    }
+
+    .faq-mini p {
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    .faq-mini strong {
+      color: #7d5438;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="hero-short">只是整理，也是一种靠近</div>
+
+    <div class="opening">
+      从赛事日程到球员档案，从联赛历史到转播动态——信息铺天盖地，但真正需要的时候，我们往往找不到那个清晰的入口。
+      这也是为什么，有人会选择把散落的内容逐一归档，慢慢拼出一幅可靠的索引图。
+    </div>
+
+    <div class="gather-note">
+      <p>几年前我开始留意体育资讯的流变方式。热门消息转瞬即逝，而很多有价值的背景、赛前分析或者规则演变，反而沉淀在不易察觉的角落。于是，我尝试用一种更安静的整理思路：不追逐头条，而是把那些反复出现、值得参考的信息源记录下来，按项目、联赛和关键词分类，再配上简单的说明。</p>
+      <p>这个过程很慢，但很踏实。慢慢地，手边积攒了不少链接和笔记，它们彼此之间也开始产生关联。比如一篇关于意甲青训体系的旧文，会指向某位教练的战术笔记；某条冬季转会的流言，背后可能连着三份不同的财务报道。这种连接本身，就是索引的乐趣。</p>
+    </div>
+
+    <ul class="feature-list">
+      <li>
+        <span class="feature-marker">❶</span>
+        <span><strong>按项目分层</strong> —— 足球、篮球、网球、赛车……每个大类下设子分类，避免信息混在一起，查找时少翻一页。</span>
+      </li>
+      <li>
+        <span class="feature-marker">❷</span>
+        <span><strong>附短注与日期</strong> —— 每条资料都标注了整理时间与一句话摘要，方便判断时效与相关度，不会点开才发现内容已过时。</span>
+      </li>
+      <li>
+        <span class="feature-marker">❸</span>
+        <span><strong>持续补充，不追求完美</strong> —— 索引本身是活的。今天漏掉的一场杯赛，明天可能就会补上。页面不炫耀数量，只在意是否真的有用。</span>
+      </li>
+    </ul>
+
+    <div class="faq-mini">
+      <p><strong>常见疑问</strong> · 这些资料从哪里来？公开报道、联赛官网、统计平台以及一些长期跟踪体育媒体的个人博客。整理过程中尽量保留原始出处，方便交叉验证。</p>
+      <p><strong>还会更新吗？</strong> 会的，不过节奏偏慢——大约每两周会集中梳理一次，补充近期的赛事背景或规则变动。偶尔也会把旧的条目重新核实一遍。</p>
+    </div>
+
+    <hr>
+
+    <div class="soft-end">
+      如果你也在寻找一个顺手、不吵不闹的体育信息起点，不妨看看这份整理的成果。从意甲到欧冠，从转会窗到青训报告，许多内容已经安静地等在那里。你可以直接浏览 <a href="https://root-milan.com">米兰体育</a> 的索引页面，按自己的节奏翻阅。没有弹窗，没有催促，只有一条一条认真摆好的资料。
+    </div>
+
+    <div class="small-note">
+      <span>信息手记 · 持续修订中</span>
+    </div>
+  </div>
+</body>
+</html>
